@@ -26,6 +26,8 @@ WebPack é um bunder ou um empacotador, capaz de nos ajudar nas varias microtare
 6: Gera a pasta dist + o arquivo bundle
     -npm run build
 
+
+
 //2° parte
 7: cole a segunda parte no webpack
 
@@ -48,6 +50,8 @@ WebPack é um bunder ou um empacotador, capaz de nos ajudar nas varias microtare
 quando a linha a cima for rodada, avera uma mudança no arquivo bundle.js, a primeira paravara que era const, vai mudar para var
 
 
+
+// parte 3
 // Exemplo para primeira aplicação:
 1: criei o arquivo index.html e coloquei uma estrutura base la
 
