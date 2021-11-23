@@ -1,0 +1,17 @@
+# WebPack e Babel
+
+Babel nos ajuda com a compatibilidade do codigo js, garantindo que nos desenvolvedores possamos utilizar o que tem de mais avançado da linguagem sem termos que nos preocupar se os navegadores ja implementaram o novo recurso. Isso facilita pois assim não precisamos no preocupar com a compatibilidade dos brwousers.
+
+WebPack é um bunder ou um empacotador, capaz de nos ajudar nas varias microtarefas que precisam ser feitas no front-end. Tudo sendo realizada de forma altomatica, baseada nas configuraçoes que vc escolher.
+
+
+1: Iniciando o projeto
+   Cria um package.json
+    -npm init --y
+
+2: Instala 3 bibliotecas do webpack
+    -npm i --save-dev webpack webpack-cli webpack-dev-server
+
+3: Criar pasta 'src', onde tera o codigo fonte da aplicação 
+
+4: dentro da pasta src criar um arquivo index.js
