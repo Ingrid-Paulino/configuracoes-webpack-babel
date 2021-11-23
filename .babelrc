@@ -1,0 +1,7 @@
+// Quando o babel for rodar, o babel-loader vai preocurar esse arquivo aqui.
+
+// esse arquivo especifica que nos estaremos trabalhando com a versão mais recente da linguagem javaScript, e que estaremos trabalhando com react tambem
+
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
+}

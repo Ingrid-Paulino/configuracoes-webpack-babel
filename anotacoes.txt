@@ -4,7 +4,8 @@ Babel nos ajuda com a compatibilidade do codigo js, garantindo que nos desenvolv
 
 WebPack é um bunder ou um empacotador, capaz de nos ajudar nas varias microtarefas que precisam ser feitas no front-end. Tudo sendo realizada de forma altomatica, baseada nas configuraçoes que vc escolher.
 
-
+/
+//1° parte
 1: Iniciando o projeto
    Cria um package.json
     -npm init --y
@@ -14,4 +15,34 @@ WebPack é um bunder ou um empacotador, capaz de nos ajudar nas varias microtare
 
 3: Criar pasta 'src', onde tera o codigo fonte da aplicação 
 
-4: dentro da pasta src criar um arquivo index.js
+4: dentro da pasta src criar um arquivo index.js. coloque la dentro -> const meuNome = 'Mario';
+
+5: criar arquivo webpack.config.js + preencher
+
+// para a webpack conseguir rodar e pegar as cofiguraçoes feitas, é necessario ir no package.json e criar um script que vai rodar para chamar o webpack pra fazer o comando de build
+
+// crie um arquivo .gitignore, e ignore a pasta dist que sera criada + a pasta node_modules
+
+6: Gera a pasta dist + o arquivo bundle
+    -npm run build
+
+//2° parte
+7: cole a segunda parte no webpack
+
+8: baixar o babel-loader
+    -npm i babel-loader @babel/core @babel/preset-env @babel/preset-react
+
+    //vai gerar essa linhas no dependencies, mas vc tem que passa-las para o devDependencies
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "babel-loader": "^8.2.3"
+
+9: criar um arquivo chamado .babelrc e cole dentro essa configuração
+ -> {
+     "presets": ["@babel/preset-env", "@babel/preset-react"]
+    }
+
+10: tentar rodar e ver se a nossa pasta dist vai ser gerada mais uma vez
+    -npm run build
+quando a linha a cima for rodada, avera uma mudança no arquivo bundle.js, a primeira paravara que era const, vai mudar para var
