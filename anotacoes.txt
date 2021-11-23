@@ -1,4 +1,4 @@
-# WebPack e Babel
+# INSTALAÇÃO DO WebPack e Babel
 
 Babel nos ajuda com a compatibilidade do codigo js, garantindo que nos desenvolvedores possamos utilizar o que tem de mais avançado da linguagem sem termos que nos preocupar se os navegadores ja implementaram o novo recurso. Isso facilita pois assim não precisamos no preocupar com a compatibilidade dos brwousers.
 
@@ -46,3 +46,47 @@ WebPack é um bunder ou um empacotador, capaz de nos ajudar nas varias microtare
 10: tentar rodar e ver se a nossa pasta dist vai ser gerada mais uma vez
     -npm run build
 quando a linha a cima for rodada, avera uma mudança no arquivo bundle.js, a primeira paravara que era const, vai mudar para var
+
+
+// Exemplo para primeira aplicação:
+1: criei o arquivo index.html e coloquei uma estrutura base la
+
+2: mudei no packge.json o scripts build para producão: 
+  - "build": "webpack --mode production"
+
+//adicionei mais uma linha:
+isso vai ajudar a trabalhar no modo de desenvolvimento.
+
+//ao inves de start, posso colocar dev tbm.
+    - "start": "webpack serve --hot --mode development" 
+      --hot: faz o processo de Reloading/ recarrega automaticamente quando eu salvar
+
+//dica assim:
+    "scripts": {
+        "start": "webpack serve --hot --mode development",
+        "build": "webpack --mode development"
+    },
+
+3: para o html ser aceito, precisa ter um plugin instalado
+    -npm i --save-dev html-webpack-plugin
+
+4: cole as linhas la no WebPack.config.js
+     -const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+     -plugins: [
+    new HtmlWebpackPlugin({  // Also generate a test.html
+      filename: 'index.html',
+      template: 'src/index.html'
+    })
+  ]
+
+5: Roda:
+    -npm run start
+    ou
+    -npm start
+mostra em qual porta esta o projeto esta rodando
+
+6: instalar o react 
+    -npm i react react-dom
+
+7: Colocado as coisas do react no index.js
